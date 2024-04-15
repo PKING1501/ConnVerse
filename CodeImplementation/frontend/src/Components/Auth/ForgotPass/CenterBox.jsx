@@ -28,7 +28,7 @@ const CenterBox = ({ setSignIn }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`https://connverse-hcgzo.ondigitalocean.app/send-otp`, {
+      const response = await fetch(`http://localhost:8080/send-otp`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ const CenterBox = ({ setSignIn }) => {
 
     try {
       const response = await axios.post(
-          `https://connverse-hcgzo.ondigitalocean.app/forgot-password`,
+          `http://localhost:8080/forgot-password`,
           {
             email: signUpEmail,
             old_password: validationCode,
